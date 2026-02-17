@@ -22,6 +22,11 @@ project-specific conventions only.
 5. Modify CPT fields, blocks, and config to match requirements
 6. Run `npm install && npm run build`
 7. Test activation in WordPress (or use blueprint.json in Playground)
+8. Post-rename cleanup (scaffold-only content):
+   - **CLAUDE.md**: Rewrite "What This Is" for the new plugin. Remove "Renaming" and "Optional Modules" sections. Keep Architecture, Common Tasks, Coding Conventions, Admin UI Rules, and Build & Release.
+   - **README.md**: Rewrite entirely for the new plugin. Document all shortcodes and attributes if kept.
+   - **CHANGELOG.md**: Reset to a single entry for the new plugin's first version.
+   - **blueprint.json**: Update `blogname` and `landingPage` slug.
 
 ## Architecture
 

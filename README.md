@@ -36,7 +36,7 @@ ln -s ~/Projects/my-plugin ~/Studio/my-site/wp-content/plugins/my-plugin
 ### Optional Modules (removable)
 - **DataViews admin screen** — `@wordpress/dataviews` powered item browser
 - **Frontend display block** — Interactivity API with category filtering
-- **Shortcodes** — legacy/compatibility layer for Beaver Builder
+- **Shortcodes** — legacy shortcode output
 - **Admin columns** — custom sortable columns on the CPT list table
 
 ## Development

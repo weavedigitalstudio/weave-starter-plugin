@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file.
 - GitHub Actions release workflow.
 - Optional: DataViews admin screen.
 - Optional: Interactivity API frontend display block.
-- Optional: Shortcodes for Beaver Builder compatibility.
+- Optional: Legacy shortcode output.
 - Optional: Custom admin columns with sorting.
 - WordPress Playground blueprint for testing.
 - CLAUDE.md agent instructions for AI-assisted development.
