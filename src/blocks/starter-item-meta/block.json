@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "weave-starter/starter-item-meta",
+	"title": "Starter Item Details",
+	"category": "widgets",
+	"icon": "edit-page",
+	"description": "Meta field entry block for the Starter Item custom post type.",
+	"textdomain": "weave-starter-plugin",
+	"supports": {
+		"html": false,
+		"multiple": false,
+		"reusable": false
+	},
+	"editorScript": "file:./index.js"
+}

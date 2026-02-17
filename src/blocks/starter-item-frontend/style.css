@@ -1,0 +1,98 @@
+/**
+ * OPTIONAL MODULE: Frontend display block styles.
+ *
+ * Styles for the filterable items grid. Loaded on both the frontend
+ * and in the block editor.
+ */
+
+.weave-starter-items-display {
+	max-width: 1200px;
+}
+
+/* Filter buttons */
+.weave-starter-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 24px;
+}
+
+.weave-starter-filter-btn {
+	padding: 6px 16px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background: #fff;
+	cursor: pointer;
+	font-size: 14px;
+	transition: background-color 0.2s, border-color 0.2s;
+}
+
+.weave-starter-filter-btn:hover {
+	background: #f0f0f0;
+	border-color: #999;
+}
+
+.weave-starter-filter-btn.is-active {
+	background: #1e1e1e;
+	color: #fff;
+	border-color: #1e1e1e;
+}
+
+/* Items grid */
+.weave-starter-items-grid {
+	display: grid;
+	gap: 24px;
+}
+
+/* Item card */
+.weave-starter-item-card {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	background: #fff;
+	transition: box-shadow 0.2s;
+}
+
+.weave-starter-item-card:hover {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weave-starter-item-card[hidden] {
+	display: none;
+}
+
+.weave-starter-item-card__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.weave-starter-item-card__content {
+	padding: 16px;
+}
+
+.weave-starter-item-card__title {
+	margin: 0 0 8px;
+	font-size: 18px;
+}
+
+.weave-starter-item-card__title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.weave-starter-item-card__title a:hover {
+	text-decoration: underline;
+}
+
+.weave-starter-item-card__subtitle {
+	margin: 0 0 8px;
+	color: #666;
+	font-size: 14px;
+}
+
+.weave-starter-item-card__price {
+	margin: 0;
+	font-weight: 600;
+	font-size: 16px;
+}

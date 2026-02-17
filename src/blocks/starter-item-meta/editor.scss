@@ -1,0 +1,26 @@
+/**
+ * Editor styles for the Starter Item Meta block.
+ *
+ * Provides a card-like container so the meta fields are visually
+ * distinct from the post content area.
+ */
+.wp-block-weave-starter-starter-item-meta {
+	background: #f0f0f0;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 16px 20px;
+
+	.weave-starter-meta-block__title {
+		margin-top: 0;
+		margin-bottom: 12px;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		color: #1e1e1e;
+	}
+
+	.components-base-control {
+		margin-bottom: 12px;
+	}
+}
