@@ -117,6 +117,7 @@ Files marked "OPTIONAL MODULE" in their header comment can be removed. Also remo
 | Change admin columns | `inc/admin-columns.php` |
 | Update GitHub updater | `inc/github-updater.php` — change constants at top of class |
 | Update BunnyCDN icons | `inc/github-updater.php` — `ICON_SMALL` and `ICON_LARGE` constants |
+| Change plugin action links | `inc/hooks.php` — `add_plugin_action_links()` (Settings link on Plugins screen) |
 
 **About tab logo:** Uses the same BunnyCDN icon URL from the GitHub updater class. No bundled image files.
 
@@ -182,6 +183,7 @@ npm run lint           # Lint JS and CSS
 - **Dependencies**: No ACF, no WooCommerce, no Composer, no jQuery
 - **Shortcode docs**: Always document shortcodes and their attributes in README.md with usage examples. Do not reference specific page builders — shortcodes work everywhere.
 - **README**: Every plugin README must list all shortcodes, their attributes, and default values. Keep it concise — one line per attribute is enough.
+- **Plugin action links**: Every plugin MUST have a "Settings" link on the Plugins list screen (appears before "Deactivate"). This is already wired up in `inc/hooks.php` via the `plugin_action_links_{basename}` filter. After renaming, verify the URL in `add_plugin_action_links()` points to the correct admin page slug.
 
 ## Admin UI Rules
 
