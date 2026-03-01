@@ -117,6 +117,23 @@ Files marked "OPTIONAL MODULE" in their header comment can be removed. Also remo
 | Change admin columns | `inc/admin-columns.php` |
 | Update GitHub updater | `inc/github-updater.php` — change constants at top of class |
 | Update BunnyCDN icons | `inc/github-updater.php` — `ICON_SMALL` and `ICON_LARGE` constants |
+
+### GitHub Updater — Critical Rules
+
+The `after_install()` method in the updater MUST guard against running for other plugins:
+```php
+if ( empty( $hook_extra['plugin'] ) || $hook_extra['plugin'] !== $this->basename ) {
+    return $result;
+}
+```
+Without this, updating ANY plugin will corrupt files. The `upgrader_post_install` hook fires for all plugin installs, not just ours.
+
+The `check_update()` response MUST include these keys alongside `slug`, `plugin`, `new_version`, `tested`, `package`, and `icons`:
+- `'url'` — plugin homepage (from `PluginURI` header)
+- `'requires_php'` — minimum PHP version (from `RequiresPHP` header)
+- `'requires'` — minimum WordPress version (from `RequiresWP` header)
+
+Without these, WordPress cannot warn users about incompatible environments before they attempt the update.
 | Change plugin action links | `inc/hooks.php` — `add_plugin_action_links()` (Settings link on Plugins screen) |
 
 **About tab logo:** Uses the same BunnyCDN icon URL from the GitHub updater class. No bundled image files.
